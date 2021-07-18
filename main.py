@@ -9,6 +9,11 @@ with open("data.json") as f:
 
 DOWNLOAD_DIR = os.path.abspath("./result")
 
+try:
+    os.mkdir(DOWNLOAD_DIR)
+except FileExistsError:
+    pass
+
 FILES_BEFORE = len(os.listdir(DOWNLOAD_DIR))
 
 SRF_NO = _data["SRF_NO"]
@@ -48,11 +53,6 @@ def load_driver() -> webdriver.Firefox:
     options.add_argument("--headless")
 
     return webdriver.Firefox(profile, options=options)
-
-try:
-    os.mkdir(DOWNLOAD_DIR)
-except FileExistsError:
-    pass
 
 browser = load_driver()
 
