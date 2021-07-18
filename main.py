@@ -56,6 +56,8 @@ def load_driver() -> webdriver.Firefox:
 
 browser = load_driver()
 
+print("Begin process")
+
 while True:
     browser.get(URL)
 
@@ -71,8 +73,9 @@ while True:
 
     if not check_fail(browser):
         break
-    
+
     sleep(POLLING_RATE)
 
+print("RESULT AVAILABLE")
 show_result()
 browser.close()

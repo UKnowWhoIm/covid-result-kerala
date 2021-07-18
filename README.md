@@ -14,7 +14,7 @@ View your COVID result as soon as it is published. Applicable only for tests in 
 3. Create venv and activate it.
 4. Install dependancies by running `pip install -r requirements.txt`.
 5. Run `python main.py`.
-6. Keep the process running, if your result is available it will be popped up.
+6. Keep the process running, if your result is available it will be popped up. The result will be available in the results directory.
 
 ## License
 
